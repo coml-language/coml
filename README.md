@@ -23,4 +23,4 @@
 
 ## License
 
-Ce projet est distribué sous les termes de la Licence [MIT]("https://github.com/coml-language/coml/blob/main/LICENSE").
+Ce projet est distribué sous les termes de la Licence [MIT](https://github.com/coml-language/coml/main/LICENSE)
