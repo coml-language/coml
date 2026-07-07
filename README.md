@@ -28,3 +28,10 @@
       staging { debug: true }
       production { debug: false }
 ```
+
+
+## License
+
+
+[Apache-2.0]("")
+[MIT]("")
