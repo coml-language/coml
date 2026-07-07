@@ -11,20 +11,20 @@
 
 ```yaml
 [package]:
-    name     = "aevum"
-    version  = "0.1.0"
-    authors  = ["jclermonttt"]
-    features = ["clock", "timer", "sync"]
+   name     = "aevum"
+   version  = "0.1.0"
+   authors  = ["jclermonttt"]
+   features = ["clock", "timer", "sync"]
 
    # Une tabulation/indentation ici crée
    # automatiquement 'project.database'
-   [database]:
+   [dependencies]:
       host: "127.0.0.1"
       port: 5432
 
    # Même logique pour les environnements.
    # qappartiennent à project
-   [environments]:
+   [features]:
       staging { debug: true }
       production { debug: false }
 ```
