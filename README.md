@@ -11,22 +11,22 @@
 
 ```yaml
 [package]:
-   name     = "aevum"
-   version  = "0.1.0"
-   authors  = ["jclermonttt"]
-   features = ["clock", "timer", "sync"]
+  name     = "aevum"
+  version  = "0.1.0"
+  authors  = ["jclermonttt"]
+  features = ["clock", "timer", "sync"]
+ 
+  # Une tabulation/indentation ici crée
+  # automatiquement ['package.dependencies']
+  [dependencies]:
+     host: "127.0.0.1"
+     port: 5432
 
-   # Une tabulation/indentation ici crée
-   # automatiquement ['projet.dependencies']
-   [dependencies]:
-      host: "127.0.0.1"
-      port: 5432
-
-   # Même logique pour les environnements.
-   # qappartiennent à project
-   [features]:
-      staging { debug: true }
-      production { debug: false }
+  # Même logique pour les environnements.
+  # qappartiennent à project
+  [features]:
+     staging { debug: true }
+     production { debug: false }
 ```
 
 
