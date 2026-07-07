@@ -32,4 +32,4 @@
 
 ## License
 
-[MIT]("https://github.com/coml-language/coml/blob/main/MIT")
+[MIT]:"https://github.com/coml-language/coml/blob/main/MIT"
