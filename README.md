@@ -9,12 +9,11 @@
 
 ```yaml
 [package]
-  name = "aevum"
+  name = "coml"
   version = "0.1.0"
-  authors = ["jclermonttt"]
-  features = ["clock", "timer", "sync"]
-  # Une tabulation/indentation ici crée
-  # automatiquement ['package.dependencies']
+  authors = ["John Doe"]
+
+  # ['package.dependencies']
   [dependencies]:
 
   # [`package.features`]
