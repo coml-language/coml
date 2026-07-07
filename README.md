@@ -12,6 +12,7 @@
 ```
 [project]:
    name: "aevum"
+   authors = ["jclermonttt"]
    version: "0.1.0"
    features: ["clock", "timer", "sync"]
 
@@ -21,14 +22,9 @@
       host: "127.0.0.1"
       port: 5432
 
-   # Même logique pour les environnements qui       appartiennent à project
+   # Même logique pour les environnements.
+   qappartiennent à project
    [environments]:
       staging { debug: true }
-      production { debug: false }
-
-# Retour au niveau 0 = Nouvelle racine
-indépendante de 'project'
-[meta]:
-   author: "Dev Team"
-
+      production { debug: false }
 ```
