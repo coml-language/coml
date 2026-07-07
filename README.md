@@ -22,4 +22,7 @@
 ```
 
 ## License
----
+
+Ce projet est distribué sous les termes de la Licence [MIT].
+
+[MIT]("")
