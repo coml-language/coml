@@ -17,13 +17,13 @@
    features: ["clock", "timer", "sync"]
 
    # Une tabulation/indentation ici crée
-   automatiquement 'project.database'
+   # automatiquement 'project.database'
    [database]:
       host: "127.0.0.1"
       port: 5432
 
    # Même logique pour les environnements.
-   qappartiennent à project
+   # qappartiennent à project
    [environments]:
       staging { debug: true }
       production { debug: false }
@@ -32,4 +32,4 @@
 
 ## License
 
-[MIT]:"https://github.com/coml-language/coml/blob/main/MIT"
+[MIT]("https://github.com/coml-language/coml/blob/main/MIT")
