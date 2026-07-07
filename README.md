@@ -3,33 +3,24 @@
 
 *Clarus Obvious, Minimal Language.*
 ===================================
-
-
-
 </div>
 
 [COML]: https://coml-language.github.io/coml.io/
 
 ```yaml
 [package]
-   name     = "aevum"
-   version  = "0.1.0"
-   authors  = ["jclermonttt"]
-   features = ["clock", "timer", "sync"]
+  name = "aevum"
+  version = "0.1.0"
+  authors = ["jclermonttt"]
+  features = ["clock", "timer", "sync"]
+  # Une tabulation/indentation ici crée
+  # automatiquement ['package.dependencies']
+  [dependencies]:
 
-   # Une tabulation/indentation ici crée
-   # automatiquement ['package.dependencies']
-   [dependencies]:
-    host: "127.0.0.1"
-    port: 5432
-
-   # Même logique pour les environnements.
-   # qappartiennent à project
-   [features]:
-     default = [""]
+  # [`package.features`]
+  [features]:
+    default = [""]
 ```
 
-
 ## License
-
-[MIT]("https://github.com/coml-language/coml/blob/main/MIT")
+---
