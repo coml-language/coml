@@ -12,11 +12,12 @@
  name = "coml"
  version = "0.1.0"
  authors = ["John Doe"]
+
  # ['package.dependencies']
- [dependencies]:
+ [dependencies]
 
  # [`package.features`]
- [features]:
+ [features]
  default = [""]
 ```
 
