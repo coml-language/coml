@@ -10,7 +10,7 @@
 [COML]: https://coml-language.github.io/coml.io/
 
 ```
-[project]:
+[package]:
    name: "aevum"
    authors = ["jclermonttt"]
    version: "0.1.0"
