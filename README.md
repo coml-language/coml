@@ -3,8 +3,7 @@
 
 *Clarus Obvious, Minimal Language.*
 ===================================
-
-| [Website][COML] |  
+
 
 </div>
 
