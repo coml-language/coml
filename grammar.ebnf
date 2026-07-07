@@ -1,0 +1,29 @@
+(* Syntaxe COML *)
+
+coml_file      = { section } ;
+
+(* Une section commence à la racine (niveau 0) *)
+section        = "[" identifier "]" , [ newline , body ] ;
+
+(* Le corps est défini par une indentation (tabulation) *)
+body           = { indentation , ( property | sub_section ) , newline } ;
+
+(* Propriétés et sous-sections *)
+property       = identifier , ":" , value ;
+sub_section    = "[" identifier "]" , [ newline , body ] ;
+
+(* Valeurs autorisées *)
+value          = string | number | boolean | list | inline_object ;
+list           = "[" , [ value , { "," , value } ] , "]" ;
+inline_object  = "{" , { identifier , ":" , value } , "}" ;
+
+(* Lexique *)
+identifier     = letter , { letter | digit | "_" | "-" } ;
+string         = '"' , { character } , '"' ;
+number         = digit , { digit } , [ "." , digit , { digit } ] ;
+boolean        = "true" | "false" ;
+indentation    = "\t" ; (* Règle : 1 tabulation par niveau *)
+newline        = "\n" ;
+letter         = "a" | ... | "z" | "A" | ... | "Z" ;
+digit          = "0" | ... | "9" ;
+character      = ? tout caractère sauf guillemet ? ;
