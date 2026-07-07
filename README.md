@@ -10,21 +10,23 @@
 
 [COML]: https://coml-language.github.io/coml.io/
 
-```coml
+```yaml
 [package]
-    name     = "aevum"
-    version  = "0.1.0"
-    authors  = ["jclermonttt"]
-    features = ["clock", "timer", "sync"]
-    # Une tabulation/indentation ici crée
-    # automatiquement ['package.dependencies']
-    [dependencies]:
+   name     = "aevum"
+   version  = "0.1.0"
+   authors  = ["jclermonttt"]
+   features = ["clock", "timer", "sync"]
+
+   # Une tabulation/indentation ici crée
+   # automatiquement ['package.dependencies']
+   [dependencies]:
     host: "127.0.0.1"
     port: 5432
-    # Même logique pour les environnements.
-    # qappartiennent à project
-    [features]:
-      default = [""]
+
+   # Même logique pour les environnements.
+   # qappartiennent à project
+   [features]:
+     default = [""]
 ```
 
 
