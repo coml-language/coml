@@ -25,4 +25,4 @@
 
 Ce projet est distribué sous les termes de la Licence [MIT](MIT).
 
-[MIT]("https://github.com")
+![MIT]("https://github.com")
