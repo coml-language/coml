@@ -32,6 +32,4 @@
 
 ## License
 
-
-[Apache-2.0]("")
 [MIT]("https://github.com/coml-language/coml/blob/main/MIT")
