@@ -11,10 +11,10 @@
 
 ```yaml
 [package]:
-   name: "aevum"
-   authors = ["jclermonttt"]
-   version: "0.1.0"
-   features: ["clock", "timer", "sync"]
+    name     = "aevum"
+    version  = "0.1.0"
+    authors  = ["jclermonttt"]
+    features = ["clock", "timer", "sync"]
 
    # Une tabulation/indentation ici crée
    # automatiquement 'project.database'
