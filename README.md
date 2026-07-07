@@ -7,18 +7,17 @@
 
 [COML]: https://coml-language.github.io/coml.io/
 
-```yaml
+```coml
 [package]
-  name = "coml"
-  version = "0.1.0"
-  authors = ["John Doe"]
+ name = "coml"
+ version = "0.1.0"
+ authors = ["John Doe"]
+ # ['package.dependencies']
+ [dependencies]:
 
-  # ['package.dependencies']
-  [dependencies]:
-
-  # [`package.features`]
-  [features]:
-    default = [""]
+ # [`package.features`]
+ [features]:
+ default = [""]
 ```
 
 ## License
