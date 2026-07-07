@@ -9,7 +9,7 @@
 
 [COML]: https://coml-language.github.io/coml.io/
 
-```toml
+```yaml
 [package]:
    name: "aevum"
    authors = ["jclermonttt"]
