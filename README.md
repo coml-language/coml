@@ -17,7 +17,7 @@
    features = ["clock", "timer", "sync"]
 
    # Une tabulation/indentation ici crée
-   # automatiquement 'project.database'
+   # automatiquement ['projet.dependencies']
    [dependencies]:
       host: "127.0.0.1"
       port: 5432
