@@ -1,8 +1,22 @@
-(* An identifier can only be a bare key, matching  *)
-identifier = bare_char, { bare_char } ;
+(* Root entry point: A COML file is a sequence of expressions or empty lines *)
+coml = { expression | newline } ;
 
-(* Allowed characters: alphanumeric, underscore, and hyphen *)
-bare_char  = alpha_char | digit | "_" | "-" ;
+(* An expression represents a high-level syntactic construct *)
+expression = block_section ;
+
+(* A block consists of a parent section followed by zero or more indented sub-sections *)
+block_section = parent_section, newline, { sub_section } ;
+
+(* Parent section header: must NOT have any leading indentation *)
+parent_section = "[", inline_ws, identifier, inline_ws, "]" ;
+
+(* Sub-section header: requires mandatory leading indentation *)
+sub_section = indentation, "[", inline_ws, identifier, inline_ws, "]", newline ;
+
+
+(* TOML-compliant Bare Key Identifiers (No quoted keys allowed) *)
+identifier      = bare_char, { bare_char } ;
+bare_char       = alpha_char | digit | "_" | "-" ;
 
 (* Base Whitespace Primitives (Unicode Hex Escape Notation) *)
 space           = "\u{0020}" ;  (* Space Character *)
@@ -10,14 +24,15 @@ tab             = "\u{0009}" ;  (* Horizontal Tab *)
 
 (* Line Ending Primitives *)
 carriage_return = "\u{000D}" ;  (* CR *)
-line_feed            = "\u{000A}" ;  (* LF *)
-newline               = line_feed | carriage_return, line_feed ;
+line_feed       = "\u{000A}" ;  (* LF *)
+newline         = line_feed | carriage_return, line_feed ;
 
 (* Structural Layout Rules *)
-indentation     = { space | tab } ;
+indentation     = ( space | tab ), { space | tab } ;
 inline_ws       = { space | tab } ;
 
-alpha_char     = lowercase_char | uppercase_char ;
-digit          = "0" .. "9" ;
-lowercase_char = "a" .. "z" ;
-uppercase_char = "A" .. "Z" ;
+
+alpha_char      = lowercase_char | uppercase_char ;
+digit           = "0" .. "9" ;
+lowercase_char  = "a" .. "z" ;
+uppercase_char  = "A" .. "Z" ;
