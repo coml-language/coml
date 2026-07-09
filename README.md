@@ -33,6 +33,17 @@ Voici un exemple valide de fichier `.coml` :
     enabled = true
 ```
 
+## Le Système de Types
+
+| Type | Syntaxe | Exemple |
+| :--- | :--- | :--- |
+| **String** | Séquence UTF-8 délimitée par des guillemets doubles | `host = "127.0.0.1"` |
+| **Integer** | Valeur numérique entière signée ou non en base 10 | `port = 8080` |
+| **Float** | Nombre à virgule flottante (IEEE 754) | `timeout = 30.5` |
+| **Inline Table** | Collection compacte clé-valeur sur une seule ligne | `rate = { interval = "10s" }` |
+| **Date-Time** | Horodatage complet (conforme RFC 3339) | `started = 2026-07-09T13:45:00Z` |
+| **Date** | Date calendrier pure (AAAA-MM-JJ) | `backup = 2026-07-09` |
+
 ## License
 
 Ce projet est distribué sous les termes de la Licence [MIT](LICENSE)
