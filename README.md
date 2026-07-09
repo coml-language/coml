@@ -17,7 +17,24 @@
 * **Zéro Clé Entre Guillemets :** Pas de fioritures, pas d'échappements complexes dans les clés; la syntaxe n'autorise que des identifiants bruts (*bare*) ou enveloppés de quotes simples (*single-quoted*).
 
 ---
-  
+
+## Aperçu de la Syntaxe
+
+Voici un exemple valide de fichier `.coml` :
+
+```coml
+[graphics]
+    meta = { api = "vulkan", tier = 3 }
+    
+    [vulkan-core]
+        max_fps = 144
+        scale = 1.5
+        updated_at = 2026-07-09T13:38:00Z
+
+[audio]
+    enabled = true
+```
+
 ## License
 
 Ce projet est distribué sous les termes de la Licence [MIT](LICENSE)
