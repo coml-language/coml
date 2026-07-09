@@ -1,32 +1,23 @@
-(* Définition de l'indentation comme un nombre de colonnes *)
-(* On suppose ici un espace comme unité, ou une tabulation *)
-indent_unit   = " " | "\t" ;
-indent        = { indent_unit } ;
+(* An identifier can only be a bare key, matching  *)
+identifier = bare_char, { bare_char } ;
 
-(* Structure globale *)
-config        = { root_section } ;
-root_section  = "[" , identifier , "]" , "\n" , { block_content(0) } ;
+(* Allowed characters: alphanumeric, underscore, and hyphen *)
+bare_char  = alpha_char | digit | "_" | "-" ;
 
-(* Le contenu d'un bloc dépend de son niveau d'indentation *)
-(* On utilise une règle récursive pour forcer la cohérence *)
-block_content(n) = ( property(n) | subsection(n) ) ;
+(* Base Whitespace Primitives (Unicode Hex Escape Notation) *)
+space           = "\u{0020}" ;  (* Space Character *)
+tab             = "\u{0009}" ;  (* Horizontal Tab *)
 
-(* Une propriété doit avoir un niveau d'indentation supérieur au parent *)
-property(n)      = indent_of(n + 1) , identifier , "=" , value , "\n" ;
+(* Line Ending Primitives *)
+carriage_return = "\u{000D}" ;  (* CR *)
+line_feed            = "\u{000A}" ;  (* LF *)
+newline               = line_feed | carriage_return, line_feed ;
 
-(* Une sous-section définit un nouveau scope *)
-subsection(n)    = indent_of(n + 1) , "[" , identifier , "]" , "\n" , { block_content(n + 1) } ;
+(* Structural Layout Rules *)
+indentation     = { space | tab } ;
+inline_ws       = { space | tab } ;
 
-(* Aide à la règle d'indentation *)
-indent_of(n)     = { indent_unit } ; (* Dans l'implémentation, vérifier que le nombre est > n *)
-
-(* Types de valeurs (TOML-like) *)
-value         = string | integer | float | boolean | list | table ;
-string        = '"' , { character } , '"' ;
-integer       = [ "-" ] , digit , { digit } ;
-float         = [ "-" ] , digit , { digit } , "." , digit , { digit } ;
-boolean       = "true" | "false" ;
-list          = "[" , [ value , { "," , value } ] , "]" ;
-table         = { property | subsection } ;
-
-identifier    = letter , { letter | digit | "_" } ;
+alpha_char     = lowercase_char | uppercase_char ;
+digit          = "0" .. "9" ;
+lowercase_char = "a" .. "z" ;
+uppercase_char = "A" .. "Z" ;
