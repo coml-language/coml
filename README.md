@@ -7,8 +7,6 @@
 
 [COML]: https://coml-language.github.io/coml.io/
 
----
-
 ## Fonctionnalités Clés
 
 * **Structure Guidée par l'Indentation :** L'absence ou la présence d'espaces blancs en début de ligne détermine nativement les blocs parents et leurs sous-sections.
