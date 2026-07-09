@@ -7,29 +7,17 @@
 
 [COML]: https://coml-language.github.io/coml.io/
 
-## Objectif
+---
 
-​COML a été conçu pour répondre à la complexité croissante des systèmes logiciels modernes en offrant une alternative Clarus, Obvious, Minimal aux formats de configuration actuels (TOML, YAML, JSON).
-​Clarus : Une syntaxe déterministe et sans ambiguïté, garantissant une lecture identique par l'humain et la machine.
-​Obvious : Une structure hiérarchique basée sur l'indentation, rendant la portée des configurations immédiatement visible.
-​Minimal : Une réduction radicale du bruit visuel par l'élimination des redondances et des délimiteurs superflus.
-​COML vise à simplifier la gestion des infrastructures systèmes, du développement de drivers haute performance à la configuration complexe de frameworks hybrides.
+## Fonctionnalités Clés
 
+* **Structure Guidée par l'Indentation :** L'absence ou la présence d'espaces blancs en début de ligne détermine nativement les blocs parents et leurs sous-sections.
+* **Identifiants Clean & Contraints :** Protection stricte des blocs racines pour empêcher les structures confuses (les tirets et underscores sont exclus des blocs parents).
+* **Système de Types Robuste :** Support natif des chaînes de caractères, entiers, flottants, tables en ligne, ainsi que des dates et horodatages précis.
+* **Zéro Clé Entre Guillemets :** Pas de fioritures, pas d'échappements complexes dans les clés; la syntaxe n'autorise que des identifiants bruts (*bare*) ou enveloppés de quotes simples (*single-quoted*).
 
-```coml
-[package]
-  name = "coml"
-  version = "0.1.0"
-  authors = ["John Doe"]
- 
-  # ['package.dependencies']
-  [dependencies]
-   
-  # [`package.features`]
-  [features]
-     default = [""]
-```
-
+---
+  
 ## License
 
 Ce projet est distribué sous les termes de la Licence [MIT](LICENSE)
